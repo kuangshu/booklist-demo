@@ -1,0 +1,27 @@
+<view>
+	<view class="title">
+		<text>书名</text>
+		<text>作者</text>
+		<text>售价</text>
+	</view>
+	<scroll-view scroll-y="true">
+		<view wx:for="{{bookList}}" class="item">
+			<text>{{item.bookName}}</text>
+			<text>{{item.bookAuthor}}</text>
+			<text>{{item.bookPrice}}</text>
+			<button bindtap="edit" data-index="{{index}}">编辑</button>
+			<button bindtap="del" data-index="{{index}}">删除</button>			
+		</view>
+	</scroll-view>
+	<view class="price">
+		<view>总价：{{sum}}</view>
+	</view>
+	<view class="editarea">
+		<text>添加/修改</text>
+		<input bindinput="changValue" data-type="bookName" placeholder="书名" value="{{curBook.bookName}}" />
+		<input bindinput="changValue" data-type="bookAuthor" placeholder="作者" value="{{curBook.bookAuthor}}" />
+		<input bindinput="changValue" data-type="bookPrice" placeholder="价格" value="{{curBook.bookPrice}}" />
+		<button bindtap="add">确定</button>
+	</view>
+	<toast hidden="{{toastHidden}}" duration="2000" bindchange="toastChange">{{toastMsg}}</toast>
+</view>

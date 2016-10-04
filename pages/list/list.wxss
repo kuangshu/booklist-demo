@@ -1,0 +1,46 @@
+.title {
+	width: 15rem;
+	height: 3rem;
+	text-align: center;
+}
+.title text {
+	float: left;
+	width: 160rpx;
+	height: 3rem;
+	line-height: 3rem;
+}
+.item {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+.item text {
+	display: block;
+	width: 160rpx;
+	height: 2rem;
+	line-height: 2rem;
+}
+.item button {
+	height: 2rem;
+	line-height: 2rem;
+}
+.price {
+	height: 60rpx;
+	line-height: 60rpx;
+}
+.editarea {
+	margin: 20px;
+}
+.editarea text {
+	display: block;
+	height: 70rpx;
+	line-height: 70rpx;
+}
+.editarea input {
+	border:1px solid #ccc;
+	border-radius: 3px;
+	padding: 0 20px;
+	height: 60rpx;
+	line-height: 60rpx;
+	margin-bottom: 10rpx;
+}
